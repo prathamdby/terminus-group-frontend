@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Footer from './components/Footer'
 import ContactSection from './components/ContactUs'
+import ConsultantsAndPartners from './components/Consultants'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -12,6 +13,8 @@ function App() {
     <>
     <Footer />
     <ContactSection />
+    <Footer />
+    <ConsultantsAndPartners />
     </>
   )
 }
