@@ -1,30 +1,48 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import { useEffect, useState } from 'react';
 
 const ConsultantsAndPartners = () => {
-  const { ref, inView } = useInView({ threshold: 0.9 }); // Trigger at 30% visibility
   const controls = useAnimation();
+  const [hasTriggered, setHasTriggered] = useState(false); // Track if animation was triggered
+  const [defaultColor, setDefaultColor] = useState(true);
 
-  React.useEffect(() => {
-    if (inView) {
-      controls.start({
-        color: '#FF5733', // Visible color
-        transition: { duration: 0.3 }, // Faster transition
-      });
-    } else {
-      controls.start({
-        color: '#D3D3D3', // Reset color
-        transition: { duration: 0.3 }, // Smooth reset
-      });
-    }
-  }, [inView, controls]);
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = document.getElementById('consultants-header');
+      if (!element) return;
+
+      const rect = element.getBoundingClientRect();
+      const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+      const isBeyondThreshold = window.scrollY > 500; // Adjust threshold height here
+
+      if (isFullyVisible && isBeyondThreshold && !hasTriggered) {
+        controls.start({
+          color: '#FF5733', // Color when triggered
+          transition: { duration: 0.3 },
+        });
+        setHasTriggered(true); // Prevent retriggering until reset
+        setDefaultColor(false);
+      } else if (!isFullyVisible) {
+        // Reset animation when heading is no longer fully visible
+        controls.start({
+          color: '#D3D3D3', // Reset to default color
+          transition: { duration: 0.3 },
+        });
+        setHasTriggered(false); // Allow retriggering when conditions are met again
+        setDefaultColor(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [controls, hasTriggered]);
 
   return (
     <div style={{ textAlign: 'center', margin: '2rem 0' }}>
       {/* Section Header */}
       <motion.h1
-        ref={ref}
+        id="consultants-header"
         animate={controls}
         initial={{ color: '#D3D3D3' }}
         style={{
