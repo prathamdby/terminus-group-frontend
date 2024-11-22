@@ -14,7 +14,7 @@ const ConsultantsAndPartners = () => {
 
       const rect = element.getBoundingClientRect();
       const isFullyVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-      const isBeyondThreshold = window.scrollY > 500; // Adjust threshold height here
+      const isBeyondThreshold = window.scrollY > 700; // Adjust threshold height here
 
       if (isFullyVisible && isBeyondThreshold && !hasTriggered) {
         controls.start({
@@ -39,16 +39,16 @@ const ConsultantsAndPartners = () => {
   }, [controls, hasTriggered]);
 
   return (
-    <div style={{ textAlign: "center", margin: "2rem 0" }}>
+    <div style={{ textAlign: "left", margin: "2rem 4rem" }}>
       {/* Section Header */}
       <motion.h1
         id="consultants-header"
         animate={controls}
         initial={{ color: "#D3D3D3" }}
         style={{
-          fontSize: "2.5rem",
+          fontSize: "6rem",
           marginBottom: "2rem",
-          fontWeight: "bold",
+          fontWeight: "900",
         }}
       >
         Consultants & Partners
