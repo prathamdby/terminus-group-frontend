@@ -11,6 +11,7 @@ const Home = () => {
     <Footer />
     <ProjectsGrid />
     <HorizontalScrollCarousel />
+    <ProjectsGrid />
   </div>;
 };
 
