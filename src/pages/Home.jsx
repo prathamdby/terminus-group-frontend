@@ -4,6 +4,7 @@ import StatsSection from "../components/StatsSection";
 import ContactSection from "../components/ContactUs";
 import ProjectsGrid from "../components/ProjectGrid";
 import HorizontalScrollCarousel from "../components/HorizontalScroll";
+import OfficeComponent from "../components/OfficeGrid";
 const Home = () => {
   return <div>
     <ContactSection />
@@ -12,6 +13,7 @@ const Home = () => {
     <ProjectsGrid />
     <HorizontalScrollCarousel />
     <ProjectsGrid />
+    <OfficeComponent />
   </div>;
 };
 

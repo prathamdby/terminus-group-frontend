@@ -5,9 +5,10 @@ const Footer = () => {
     <footer
       style={{
         backgroundColor: "#F47216",
-        padding: "20px",
+        padding: "120px",
         color: "white",
-        width: "100%",
+        margin: "50px",
+        
       }}
     >
       <div

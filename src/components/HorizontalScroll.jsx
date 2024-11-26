@@ -121,7 +121,7 @@ export default function HorizontalScrollCarousel() {
                 color: '#333',
               }}
             >
-              Align Text with Images
+              Setting Milestones
             </p>
             <p
               style={{
@@ -130,7 +130,7 @@ export default function HorizontalScrollCarousel() {
                 color: '#555',
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt justo vitae nunc volutpat.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
           </div>
           <div
