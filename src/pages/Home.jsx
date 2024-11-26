@@ -6,6 +6,7 @@ import ProjectsGrid from "../components/ProjectGrid";
 import HorizontalScrollCarousel from "../components/HorizontalScroll";
 import OfficeComponent from "../components/OfficeGrid";
 import NewsMedia from "../components/NewsAndMedia";
+import Carousel from "../components/StartCaraousel";
 const Home = () => {
   return <div>
     <ContactSection />
@@ -16,6 +17,7 @@ const Home = () => {
     <ProjectsGrid />
     <OfficeComponent />
     <NewsMedia />
+    <Carousel />
   </div>;
 };
 
