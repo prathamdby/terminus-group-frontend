@@ -5,6 +5,7 @@ import ContactSection from "../components/ContactUs";
 import ProjectsGrid from "../components/ProjectGrid";
 import HorizontalScrollCarousel from "../components/HorizontalScroll";
 import OfficeComponent from "../components/OfficeGrid";
+import NewsMedia from "../components/NewsAndMedia";
 const Home = () => {
   return <div>
     <ContactSection />
@@ -14,6 +15,7 @@ const Home = () => {
     <HorizontalScrollCarousel />
     <ProjectsGrid />
     <OfficeComponent />
+    <NewsMedia />
   </div>;
 };
 
