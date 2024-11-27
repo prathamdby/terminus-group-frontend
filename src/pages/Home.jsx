@@ -9,19 +9,19 @@ import NewsMedia from "../components/NewsAndMedia";
 import Carousel from "../components/StartCaraousel";
 import ConsultantsAndPartners from "../components/Consultants";
 const Home = () => {
-  return <div>
-  
-    <Carousel />
-    <StatsSection />
-    <HorizontalScrollCarousel />
-    <ProjectsGrid />
-    <OfficeComponent />
-    <ConsultantsAndPartners />
-    <NewsMedia />
-    <ContactSection />
-    <Footer />
-  
-  </div>;
+  return (
+    <>
+      <Carousel />
+      <StatsSection />
+      <HorizontalScrollCarousel />
+      <ProjectsGrid />
+      <OfficeComponent />
+      <ConsultantsAndPartners />
+      <NewsMedia />
+      <ContactSection />
+      <Footer />
+    </>
+  );
 };
 
 export default Home;
