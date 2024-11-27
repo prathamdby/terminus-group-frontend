@@ -7,17 +7,20 @@ import HorizontalScrollCarousel from "../components/HorizontalScroll";
 import OfficeComponent from "../components/OfficeGrid";
 import NewsMedia from "../components/NewsAndMedia";
 import Carousel from "../components/StartCaraousel";
+import ConsultantsAndPartners from "../components/Consultants";
 const Home = () => {
   return <div>
-    <ContactSection />
+  
+    <Carousel />
     <StatsSection />
-    <Footer />
-    <ProjectsGrid />
     <HorizontalScrollCarousel />
     <ProjectsGrid />
     <OfficeComponent />
+    <ConsultantsAndPartners />
     <NewsMedia />
-    <Carousel />
+    <ContactSection />
+    <Footer />
+  
   </div>;
 };
 
